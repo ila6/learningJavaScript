@@ -1,0 +1,91 @@
+<html>
+    <head>
+        <title>
+            Second part on object
+        </title>
+    </head>
+    <body>
+        <script type="text/javascript">
+        /*
+        String type , Numbers type , Bolean type can be an object but with new keyword
+        Maths, Dates and regular expressions are objects already 
+        */
+
+        //Making a string object
+        var str = new String(); // we have created an object of String type
+        document.write("<h3> The data type is: "+typeof(str)+"</h3>"); // this will tell you the type of the argument passed and the type is object
+
+        //we can add more properties for an object outside the object block. For example, if you want to add a property after 100 lines of code
+        var Car = {
+
+        brand_name :"Tesla", 
+        car_model:"Model 4",
+        price: 30000,
+        teslaAutoPilot : function() 
+        {
+           document.write("<h3> Tesla is Auto pilot </h3>");
+        }
+                  }
+        
+        Car.fuel_type = "Electric"; // this is added to the properties of Car object.
+
+        document.write("<h3> "+Car.fuel_type+"</h3>");
+
+        //You can add functions outside the object block
+
+        Car.newFunction = function()
+        {
+            document.write("<h3> New function </h3>"); // this function is added in the Car object and can be accessed by calling it eg. Car.newFunction();
+
+        }
+
+        //deleting properties
+        delete Car.price;
+
+        document.write("<h3> "+Car.price+" </h3>"); // this will show result as undefined
+
+        //we can change the type of a property dynamically too
+        Car.car_model = 3;
+        document.write("<h3> "+typeof(Car.car_model)+" </h3>"); // it shows number as the type.
+
+        
+        
+        
+        // so when we create object , it contains properties or keys and values e.g firstName is a key and value is ila
+        let example = {
+            firstName : 'Ila',
+            lastName : 'Sharma',
+            age : 26,
+            address : {
+                city : 'Tampere',
+                postcode : 33710
+            }
+
+
+        }
+
+       // if we want to print all the key we can do that by writing:
+       console.log(Object.keys(example)); 
+       //if we want only values them:
+       console.log(Object.values(example));
+       //we can also check a particular PROPERTY in an object:
+       console.log(example.hasOwnProperty('firstName')); // this prints true.
+
+
+
+       //we can also instantiate an object in cases like these. However, it is best to always create seperate objects and not reference them to other objects.
+       // this is why a new object is to be created than referenced:
+       /*let example2 = example;
+       
+       example2.catName = 'meow';
+
+       console.log(example); 
+       console.log(example2);*/ // this will have exact same properties as example and whenever changes are made to this object example object will also change so best is to create a new object
+       let example2 = Object.assign({}, example); // this will equal the properties but they both will seperate objects as assign method makes an empty object for example i.e seperate object
+       example2.catName = 'meow';
+       console.log(example); 
+       console.log(example2); // now we have catName only to example2 object not example.
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,38 @@
+<html>
+    <head>
+    <title> Pattern match </title>
+    <script type="text/javascript">
+     function validate()
+     {
+         var username = document.getElementById("usnm").value;
+         //var regx = /E00/i; //syntax to set a regular expression, to make it case insensitive you can do:  /E00/i; just add 'i'
+         var regx = /[a-h A-H]00/; // so either a to h 00 is valid or A to H00 is valid in the entire string irrespective of the position
+        // you can pattern match various regular expressions such as , /[1-9]a[10-15]b00/ etc 
+        // Or 
+        //if you want 00 to not change but first character is not a range: [shj]00 so first character can be either 's/j/h'
+        //also
+        // if you want to exclude any number then you can use: /[^123]abc/ ...... or .... any alphabet /[^ab]dfg/....here you can mention a range too
+         if(regx.test(username)) /*as regular expressions are treated as objects in Javascript there are methods like test() which returns a boolean 
+         value so the value of username passed will be tested by test method with regular expression stored in regx if true the alert message: Valid*/
+         {
+             alert("Valid");
+         }
+         else
+         {
+             //alert("invalid");
+             document.getElementById("lb1").style.visibility = "visible";
+         }
+     }
+    </script>
+    </head>
+    <body>
+        <form action="message.html">
+            <input id="usnm" type="text" placeholder="Username">
+            <label id="lb1" style="color: crimson; visibility: hidden;"> Invalid Username</label>
+            <br>
+            <br>
+            <button onclick="validate()" type="button"> Submit </button>
+        </form>
+    
+    </body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays</title>
+</head>
+<body>
+    <script type="text/javascript">
+     let fruits = ["banana","apple","orange","grapes"];
+     //let us see all the methods for array
+     console.log(fruits); //print the whole array
+     console.log(fruits[0]); //print a particular value from the array by passing an index
+     console.log(fruits.toString()); // converts array into a string : banana,apple,orange,grapes
+     console.log(fruits.indexOf('banana')); // you can know the index of an array element
+     console.log(fruits.reverse()); // reverses the array elements
+     fruits[0] = "pear"; //we can change a particular array element 
+     console.log(fruits); // now this prints --> ["pear","apple","orange","grapes"]
+     console.log(fruits.join("_")); // this replaces comma with _ and result is --> pear_apple_orange_grapes
+     console.log(fruits.pop(), fruits); //we pop out last item by pop() method, we print the new array .. this removes banana as last element as we reversed the list
+     console.log(fruits.push("watermelon"), fruits); //pushes a new element as a last element of an array. ALos, log can have multiple arguments
+     fruits[4] = "lichi";
+     console.log(fruits); // you can also add by giving the index for a new element and value which means there is no value at 4th index but put "lichi" as 4th element.
+     // or if you don't know the length of an array you can just use length property.
+     fruits[fruits.length] = "kiwi"; //MORE BETTER AND SMATTER WAY
+     console.log(fruits);
+     console.log(fruits.shift(), fruits); // removes first element and second argument prints new array .. do not need to write another line of code to print
+     console.log(fruits.unshift("pear"), fruits);  // adds new element as first element of an array
+
+     //now we can make another array and combine with fruits array.
+     let vegetables = ["onions", "tomatos", "capsicum"];
+     let allGroceries = fruits.concat(vegetables);
+     console.log(allGroceries);
+     console.log(allGroceries.slice(1,4)); // slices and prints elements between 1st element and 4th element.
+     console.log(allGroceries.sort()); // this sorts alphabetically
+
+     let somenumbers = [2,13,22,1,9,43,55,4,100];
+     console.log(somenumbers.sort(function(a,b) {return a-b})); /*sort(compareFn?: (a: number, b: number) => number): number[]
+Function used to determine the order of the elements. It is expected to return
+a negative value if first argument is less than second argument, zero if they're equal and a positive
+value otherwise. If omitted, the elements are sorted in ascending, ASCII character order.
+```ts
+[11,2,22,1].sort((a, b) => a - b) */
+    console.log(somenumbers.sort(function(a,b) {return b-a})); // sorting in descending order.
+
+    //you can have an empty array and let for loop push elements in it 
+    let empty = new Array(); // you make a new empty array with now values i.e []
+    for(let i=0; i<=10; i++) // you initialize with [0] put further till 10 so now 11 values , i++ helps in increment
+    {
+        empty.push(i); // push method keeps on pushing value from loop
+    }
+    console.log(empty); // prints new array
+
+
+    </script>
+    
+</body>
+</html>

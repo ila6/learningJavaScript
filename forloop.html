@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <title>
+            For loop
+        </title>
+    </head>
+    <body>
+        <script type="text/javascript">
+        //for loop is used when we know in advance number of iterations
+        // the syntax is for(initialization;condition;increment/decrement)
+        // for loop is entry controlled loop which means that condition is checked before executing/printing the result
+        //Print multiplication table of 5
+       /* for(var i=1;i<=10;i++)
+        {
+            document.write("<h3>"+(i*5)+"</h3>"); 
+        }*/
+
+        //Print first five even numbers 2 4 6 8 10
+        for(var x=2;x<=10;x+=2) //increment says x=x+2 ... += is an assignment operator
+        {
+            //document.write("<h3>"+(x%2==0)+"</h3>"); // you cannot use modulus because it will print true false
+            document.write("<h3>"+(x)+"</h3>");
+        }
+        </script>
+    </body>
+</html>

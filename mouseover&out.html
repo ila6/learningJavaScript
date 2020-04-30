@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <title>
+            Mousover&out
+        </title>
+        <script type="text/javascript">
+        function newImage()
+        {
+         document.getElementById("img1").src="C:\Users\Lenovo\Pictures\moon.jpg";
+        }
+        function oldImage()
+        {
+            document.getElementById("img1").src="C:\Users\Lenovo\Pictures\beach.jpg";
+        }
+         
+        </script>
+    </head>
+    <body>
+        <img id="img1" onmouseover="newImage()" onmouseout="oldImage()" src="C:\Users\Lenovo\Pictures\beach.jpg" width="300"/> <!-- onmouseover and out 
+        are events that can be evoked by making functions and changing attributes or values-->
+    </body>
+</html>

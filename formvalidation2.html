@@ -1,0 +1,56 @@
+<html>
+    <head>
+        <title>
+            Message
+        </title>
+        <script type="text/javascript">
+        function validate()
+        {
+            var username = document.getElementById("user1"); //this is to get the input of the user and storing it in variables for manipulations
+            var password = document.getElementById("pass");
+
+            if(username.value.trim()=="") /* The username is the input taken from the user .value is  
+            what is compared if it is no text or some text .trim method helps to eradicate spaces that could be input by the user */
+            {
+              document.getElementById("lb1").style.visibility = "visible";
+              username.style.border = "solid 2px red"; // we don't need alert we can style and notify error
+              return false; // returning false will not perform action message.html as we don't want user to sign in if conditions are true
+            }
+              else if(password.value.trim()=="")
+            {
+              document.getElementById("lb2").style.visibility = "visible";
+              password.style.border = "solid 2px red";
+              return false; // returning true will perform action message.html, a user is directed to the welcome page.
+            }
+            else if(password.value.trim().length<5)
+            {
+                document.getElementById("lb3").style.visibility = "visible";
+                password.style.border = "solid 2px red";
+               return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
+
+        </script>
+    </head>
+    <body>
+        <form action="message.html" onsubmit="return validate()">  <!-- form action : when form is submitted what action should be performed and 
+        with return we can disable or able this event-->
+            <input id="user1" placeholder="Username" type="text"/>
+            <label id="lb1" style="color: brown; visibility: hidden;">Invalid username</label> <!--we keep visibility hidden because we don't
+            want it to be seen just yet but when username is invalid we can invoke visibility with valide function-->
+            <br>
+            <br>
+            <input id="pass" placeholder="Password" type="password"/>
+            <label id="lb2" style="color: brown; visibility: hidden;">Invalid password</label>
+            <label id="lb3" style="color: brown; visibility: hidden;">password should be more than 5 characters</label>
+            <br>
+            <br>
+            <button type="submit"> Submit </button>
+
+        </form>
+    </body>
+</html>

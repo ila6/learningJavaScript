@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <title>Radiobuttons</title>
+        <script type="text/javascript">
+         function fn()
+         {
+          var str = document.getElementById("rad1"); // this takes the id store it in str
+          var str1 = document.getElementById("rad2"); // this takes the id rad2 and store it in str2
+
+          //if you have only 1 statement for if else control statements then you do not need to use {}
+
+          if(str.checked==true) /*this get decoded as : rad1.checked==true print the alert message.... checked is the property radio button element
+          that checks if the user has selected the radio button with rad1 id*/
+             alert("This gender is selected: "+str.value); // this displays value in rad1 radiobutton i.e male
+          else if(str1.checked==true)
+             alert("This gender is selected: "+str1.value); // this displays value in rad2 radiobutton i.e Female
+          else
+             alert("No gender is selected");
+
+         }
+        </script>
+    </head>
+    <body>
+        <input id="rad1" type="radio" name="grp1" value="male"> Male </input> <!-- type should be radio to make this input radiobutton, group name of 
+        both the radio buttons should be same so that only one can checked at a time but id should be different so that it can be accessed 
+        one by one value is something that will be accessed-->
+        <br>
+        <input id="rad2" type="radio" name="grp1" value="Female"> Female </input>
+        <br>
+        <button id="btn" onclick="fn()"> Click </button>
+    </body>
+</html>

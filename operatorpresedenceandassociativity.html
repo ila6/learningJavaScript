@@ -1,0 +1,35 @@
+<html>
+    <head>
+       <title>
+           Operators
+       </title>
+    </head>
+    <body>
+       <script type="text/javascript">
+       //OPERATOR ASSOCIATIVITY
+
+        var a = 4; // = assignment operator has right to left associativity RHS is assigned to LHS
+        var b = 3;
+        var c = 6;
+        var result = a+b; 
+        var result2 = a+b+c; //addition operator has left to right associativity i.e first a+b will happen then result of a+b will be added to c
+        var result3 = "ila"+b+c; // as we know that + has left to right assoc. b and c will also be shown as string because ila is string
+        var result4 = c+a+"ila"+b+c; // this will first add c and a then print ila and value of b and c as string
+
+        document.write("<h1> result : "+result+" </h1>"); //adding two values, putting c in qoutes and + operator is must to concatinate the value
+        document.write("<h1> result : "+result2+" </h1>"); 
+        document.write("<h2> result : "+result3+" </h2>"); // result is ila36
+        document.write("<h3> result : "+result4+" </h4>"); // result is 10ila36
+
+        //therefore it is important to know associativity as it can change the reslt immensely
+
+       //OPERATOR PRECEDENCE BODMAS
+
+        var result5 = a+b*c;
+        var result6 = (a+b)*c; // in BODMAS bracket has higher precedence than *
+        document.write("<h1> result : "+result5+" </h1>"); // result is 22 as b*c happened first then result of b*c got added to a
+        document.write("<h2> result : "+result6+"<h2>"); // result is 42
+
+       </script>
+    </body>
+</html>

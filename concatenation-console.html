@@ -1,0 +1,23 @@
+<html>
+<head>
+    <title>Document</title>
+    <script type="text/javascript">
+     function addValues()
+     {
+         var a = document.getElementById("text1").value;
+         var b = document.getElementById("text2").value;
+         //document.getElementById("op").innerHTML="Result = "+(a+b);
+         console.log(a+b); //shows result on browser, ctrl+shift+I..this helps us to debug any errors that might not show in the editor 
+     } 
+    </script>
+</head>
+<body>
+    <input id="text1" type="text">
+    <br><br>
+    <input id="text2" type="text">
+    <br><br>
+    <button onclick="addValues()">Add</button> <!--you can also track events in browser by doing to developer
+    tool and then to source and then to events... mouse... click..-->
+    <h1 id="op">Result = </h1>    
+</body>
+</html>

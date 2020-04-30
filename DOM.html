@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <title>
+            DOM
+        </title>
+        <script type="text/javascript">
+        //DOM manipulations and getelementbyID method
+        function btnClick()
+        {
+           // alert("Button is clicked");
+            /*what if you want to change the text of Heading 2 defined in html when button is clicked
+            we know that in Javascript has DOM and it sees html tags as objects so every object has some methods and properties therefore,
+            document is an object and represents this whole html document and
+            getElementId needs ID of the tag, innerHTML is the property of the tag as tags are objects in DOM. Now, innerHTML needs a text
+            which is Heading 2 and now because we have set another value it has changed the property value
+            
+            innerHTML is property that stores the text value in the given ID 
+            so for example if we store the value of the property by accessing the tag with getelementID function in the document this is how
+            we can do it:
+
+            var x = document.getElementById("hdng").innerHTML;
+            alert(x);    Now x will show the text of h2 tag in the pop up after button is clicked because only after event the function btnClick()
+            will work.
+             */
+
+            document.getElementById("hdng").innerHTML="Text Changed!"; 
+        }
+            
+    
+        </script>
+    </head>
+    <body>
+        <!--so the button html tag has some in built events which we can evoke example is below-->
+        <button onclick="btnClick()"> Click me to get popup </button> <!--now this event needs a function to be passed which is made using JavaScript-->
+         <h2 id="hdng"> Heading 2 </h2>
+    </body>
+</html>

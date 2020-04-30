@@ -1,0 +1,80 @@
+<html>
+    <head>
+        <title>
+            Objects in JS
+        </title>
+    </head>
+    <body>
+        <script type="text/javascript">
+
+        //Syntax to make an object, Also, Javascript is an object oriented programming language
+        // when you define a variable with upper case then it is an object .. also it has its own body {}
+        var Car = {
+
+            brand_name :"Tesla", // these are properties of the object
+            car_model:"Model 4",
+            price: 30000,
+
+            teslaAutoPilot : function() // function name/ method name and the body represents what it does
+            {
+                document.write("<h3> Tesla is Auto pilot </h3>");
+            }
+
+
+        }
+        
+        document.write("<h3> "+Car.car_model+" </h3>"); // now we can print what car model we have
+        // to print the message put in the method
+        Car.teslaAutoPilot();
+
+        // you can also make an object like written below and access its properties with dot notations or [] notations
+
+        let user = {
+            name: 'Ila',
+            age: 26,
+            email: 'ila@gmail.com',
+            location: 'Finland',
+            blogs: ['healthy habbits','master yourself'],
+            blogs2: [{title: 'many here many there ', likes: 40},{title: ' welcome to Finland ',likes: 40}], // you can also make objects by passing in an array
+            logBlogs: function()
+            {
+                //document.write(this.blogs); // this refers to the object it is in if we use it outside the object block it will return Window as an object
+                // the upper code : this.blogs give the access to blogs property this is for reference to user object
+
+                document.write("<h3> The blogs that have been written are:</h3>");
+                this.blogs2.forEach(blog => { 
+                    document.write(blog.title, blog.likes);
+                    }
+                    );
+                     
+                /* for Each uses a call function here
+               that is => and then the body of function is defined and passed to for Each function
+               Call back function is a function passed into another function as an argument, 
+               which is then invoked inside the outer function to complete some kind of routine or action. 
+               */
+            }
+
+        }
+        user.logBlogs();
+
+        document.write("<h3>"+user.name+"<h3>"); //prints name Ila in user object block
+
+        user.age = 25; // you can also change the value of a property
+
+        document.write("<h3>"+user.age+"<h3>"); // prints age in user object block
+
+        // now user object acts like an array so you can also access property like this way:
+        document.write("<h3>"+user['location']+"<h3>");
+
+        // now if you want to use similar way to change value of a property then
+        user['location'] = 'Tampere';
+        document.write("<h3>"+user['location']+"<h3>"); 
+
+        document.write(typeof user); // you can also know what is the "type" of user and it says = object
+
+
+        
+
+        </script>
+    </body>
+</html>

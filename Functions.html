@@ -1,0 +1,63 @@
+<html>
+    <head>
+        <title>
+         Functions in Javascript
+        </title>
+    </head>
+    <body>
+      <script type="text/javascript">
+      //lets make a function that adds two numbers
+      /*syntax is that we just use keyword function(small letters) and the name of functions
+       the first word of function name should be in lower case and then brackets
+       and then function body*/
+      
+      /*function add2Numbers()
+      {
+          var a=5;
+          var b=6;
+          var total=a+b;
+
+          document.write("<h3> The total is: "+total+"</h3>");
+      } // you do not need any return type as Javascript is loosely type and type can be changed
+
+    //Now you need to call the function to run it
+    add2Numbers(); */
+
+    /*One more way you can make this code:
+    function add2Numbers(a,b) //you can mention variables in the parameters.. you dont need to write int a, int b because loosely typed
+      {
+          var total=a+b;
+
+          document.write("<h3> The total is: "+total+"</h3>");
+      }
+      add2Numbers(7,8); // you can mention the values here as it expects two values as parameter
+       */
+      //As we know JavaScript is loosely typed you can use same function and concatenate two strings
+
+      /*function add2Numbers(a,b)
+      {
+          
+          var total=a+b;
+
+          document.write("<h3> The total is: "+total+"</h3>");
+      }
+
+      add2Numbers("Ila ","Sharma");
+       */
+      //function doesn't need to return any type but we can return a value through a function
+      function add2Numbers(a,b)
+      {
+          
+          var total=a+b;
+          return total; // this return total will return the value but we need a variable to catch it
+
+          
+      }
+     // outside the function block as total is returned out of the function
+     //Now this function is returning a value so the variable catching the value should on LHS as assignment is from RHS to LHS
+    var result = add2Numbers("Ila ", "Sharma");// result variable stores the values returned
+    document.write("<h3> The total is: "+result+"</h3>");// printing the result 
+
+      </script>
+    </body>
+</html>

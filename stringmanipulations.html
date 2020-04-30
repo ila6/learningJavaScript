@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>String Manipulations</title>
+</head>
+<body>
+    <script>
+        let fruit = "banana";
+        console.log(fruit.length); //returns the length of the string, NOTE - lenght is not a function it is a property
+        console.log(fruit.replace("ban", "123")); // replaces string with a string
+        console.log(fruit.slice(1,5)); // slices from given number to given number .. this 1, 5 returns = anan 1 being b and 5 being a.
+        console.log(fruit.toUpperCase()); // this function returns in capital letter
+        console.log(fruit.indexOf('b')); //index of b is 0 , if we pass no argument or a character that doesnt exist in string, it returns -1. 
+        console.log(fruit.lastIndexOf('a')); // if a character occurs numerous times like a in banana it will return where it occurs last, here it returns 5.
+        console.log(fruit.trim()); // this removes the whitespaces
+        console.log(fruit.charAt(1)); // it returns character at 1 i.e a when b is at 0.
+        console.log(fruit[1]); // it is same as above
+        console.log(fruit.split('')); // this splits all characters of string into an array .. splits by character
+        console.log(fruit.split(',')); // this returns the whole string in an array ["banana"]. So if we had multiple strings in an array then it will return each. Example,
+         let fruits = 'banana, apple, grapes';
+         console.log(fruits.split(',')); // returns (3)["banana","apple","grapes"] splits by comma
+        /* let vegetables =["capsicum","tomato","onions"];
+         console.log(vegetables.split(',')); this will not work for arrays it seems */
+
+       //for concatenation there is a new convention:
+       let firstName = 'Ila';
+       let lastName = 'Sharma';
+       const fullName = `${firstName} ${lastName}`; // this will concatenate the string
+       console.log(fullName); 
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <title>
+            Message
+        </title>
+        <script type="text/javascript">
+        function validate()
+        {
+            var username = document.getElementById("user1"); //this is to get the input of the user and storing it in variables for manipulations
+            var password = document.getElementById("pass");
+
+            if(username.value.trim() == "" || password.value.trim() == "") /* The username is the input taken from the user .value is  
+            what is compared if it is no text or some text .trim method helps to eradicate spaces that could be input by the user */
+            {
+              alert("no blank input allowed");
+              return false; // returning false will not perform action message.html as we don't want user to sign in if conditions are true
+            }
+            else
+            {
+              true; // returning true will perform action message.html, a user is directed to the welcome page.
+            }
+        }
+
+        </script>
+    </head>
+    <body>
+        <form action="message.html" onsubmit="return validate()">  <!-- form action : when form is submitted what action should be performed and 
+        with return we can disable or able this event-->
+            <input id="user1" placeholder="Username" type="text"/>
+            <br>
+            <br>
+            <input id="pass" placeholder="Password" type="password"/>
+            <br>
+            <br>
+            <button type="submit"> Submit </button>
+
+        </form>
+    </body>
+</html>

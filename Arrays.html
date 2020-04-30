@@ -1,0 +1,54 @@
+<html>
+    <head>
+        <title>
+        Arrays in JS
+        </title>
+    </head>
+    <body>
+        <script type="text/javascript">
+        //instead of making 100 variables we can make a list of values for one variables using Array data type
+        //composite data type which can stor number of values in one variable
+        // index      0      1      2
+        var cars = ["Audi","BMW","Skoda"];
+        cars.push("Mercedes");
+        var ary1;
+        ary1 = new Array("Mango","Apple","Banana"); // you can create an array like this way too
+         
+        /*document.write("<h3>"+cars+"</h3>");
+        // if you want to access a specific value you can by putting index number
+        documen.write("<h3>"+cars[1]+"</h3>"); // prints BMW
+         */
+        //indexes come handy when using loops 
+        //for(var i=0;i<4;i++) //i will be initiated from 0 index, i is less than 3 because we have only 3 values
+        for(var i=0;i<cars.length;i++)
+        {
+            document.write("<h3> "+cars[i]+" </h3>"); // this will print all the values
+           // document.write("<h3> "+ary1[i]+" </h3>"); // access ary1 array
+            //document.write("<h3> "+cars[2]+" </h3>"); // this will print Skoda 3 times
+        }
+
+        //Arrays in JavaScript are dynamic : you can make an array of different types
+        //example: ["Audi","BMW",2];
+        //also you can increment and decrement array list at runtime
+        //example: cars.push("mercedes"); Arrays are objects with properties and methods
+        //and push is one of the methods of object Arrays in Javascript.
+        //now adding length value all the time in for loop i<3 / i<4 is not smart 
+        //so we use a property known as .length -> now in loop for(var i=0;i<cars.length;i++)
+        //now even if you increase / decrease lenght of an array because of the property the code will always run
+
+        let example = [5,6,7,8,9];
+        example.forEach((element)=> {
+            console.log(element)
+        }); // this will print out each element in a array 1 by 1. Usually forEach needs a call back function here it is the arrow function.
+
+       //let example2 = example; // you created a new variable with reference of example so even though push was called on example2 it made changes to example too.
+       //to avoid this you can use spread operator i.e let example2 = [...example]; it won't pass by reference.
+        example2.push(11);
+
+        console.log(example);
+        console.log(example2);
+
+
+        </script>
+    </body>
+</html>

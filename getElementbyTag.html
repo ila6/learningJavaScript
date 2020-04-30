@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <title> getElementbyTag Method </title>
+        <script type="text/javascript">
+        //getElementbyId could only access a particular id associated with a particualr tag but getElementbyTag
+        //accesses all the element of the tag passed as an argument
+        function fn1()
+        {
+            var para = document.getElementsByTagName("p"); // getElementByTagName is another method of object document
+           // para[0].style.fontSize = 26; //style is the property of p object and it has sub properties as fontsize, color, etc
+           // para[1].style.color = "red"; //p tags are stored as a list and can manipulated with index value.
+           // para[2].style.fontStyle = "italic";
+           // para[3].style.fontWeight = "bold";
+
+            //what if you want to change fontsize of 100 paragraphs .. you can use for loop
+            for(var i=0;i<para.length;i++) //length can be used with arrays and para variable stores an array
+            {
+                para[i].style.fontSize = 24;
+            }
+        }
+
+
+        </script>
+    </head>
+    <body>
+        <p> This is a paragraph </p> <!--getElementbyTag method helps access all these paragraph tags if we pass 'p' as argument unlike getElementbyId-->
+        <p> This is a paragraph </p>
+        <p> This is a paragraph </p>
+        <p> This is a paragraph </p>
+        <br>
+        <br>
+        <button onclick="fn1()"> Click Me </button>
+    </body>
+</html>

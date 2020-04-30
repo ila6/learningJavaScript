@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title> Text Box </title>
+        <script type="text/javascript">
+        function fn1()
+        {
+            var str = document.getElementById("t1").value; //value is the property of object textbox so that value put in the text box can be accessed
+            var str1 = document.getElementById("t2").value;
+            if(str==str1) //if else to see if user inputs same text as username and password
+            {
+                alert("The username and password are same");
+            }
+            else
+            {
+                alert("The username and password are not same");
+            }
+        }
+         
+        </script>
+    </head>
+    <body>
+        <input id="t1" placeholder="username"> <!--This creates a textbox with text username-->
+        <br> <br>
+        <input id="t2" type="password" placeholder="password"> <!--Type attribute here puts ******* for password-->
+        <br><br>
+        <button onclick="fn1()" id="btn1"> Click </button>
+    </body>
+</html>

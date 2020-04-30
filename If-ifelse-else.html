@@ -1,0 +1,68 @@
+<html>
+    <head>
+        <title>
+         If-ifelse-else
+        </title>
+    </head>
+    <body>
+     <script type="text/javascript">
+     //Find whether a number is even or odd
+     var x=8;
+     if(x%2==0) //if block , keyword if then the condition and if it is true then {print this}
+     {
+         document.write("<h2> x is a even number that is: "+x+" </h2>");
+     }
+     else //else print {this}
+     {
+         document.write("<h2> x is an odd number that is: "+x+" </h2>");
+     }
+
+     //Find whether a number is positive, negative or 0
+     var y=-6;
+     if(y>0)
+     {
+         document.write("<h2> y is positive that is: "+y+"</h2>");
+     }
+     else if (y<0)
+     {
+         document.write("<h2> y is negative that is: "+y+"</h2>");
+     }
+     else
+     {
+        document.write("<h2> y is 0 that is: "+y+"</h2>");
+     }
+
+     //Find if a number is positive and even
+
+     var z=3;
+     if(z>0 && z%2==0)
+     {
+         document.write("<h2> The number is positive and even and the number is: "+z+"</h2>");
+     }
+     else
+     {
+         document.write("<h2> The number is not positive or even and the number is: "+z+"</h2>");
+     }
+     //OR another way to solve is by using nested if else statements
+
+     var t=-3;
+     if(t>0)
+     {
+         document.write("<h2> The number is positive </h2>");
+         if(t%2==0)
+         {
+             document.write("<h2> The number is even </h2>");
+         }
+         else
+         {
+             document.write("<h2> The is odd </h2>");
+         }
+     }
+     else
+     {
+        document.write("<h2> The number is negative </h2>");
+     }
+
+     </script>
+    </body>
+</html>

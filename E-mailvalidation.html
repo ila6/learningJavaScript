@@ -1,0 +1,49 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+
+    <title>Mobile number validation</title>
+    <script type="text/javascript">
+    function validate()
+    {
+        var mobileno = document.getElementById("text1").value;
+        //var regx = /^()()()()$/; //email has four parts: username,@,domain name, extension, extension = ila11@gmail.co.in so we do ()()()()
+        //var regx = /^([a-zA-z0-9\.-])$()()()/ so the first part can be letters lower or upper case, numbers, ., - but . alone can represent anything so we use backslash \. to denote nothing else but a dot
+       // var regx = /^([a-zA-z0-9\.-])$/ this will only set the rule for 1 letter but we can have a long name so we add '+'
+       //-> var regx = /^([a-zA-z0-9\.-]+)$/
+       // no we need @ sign after username so -> var regx = /^([a-zA-z0-9\.-]+)@$/ now username@ is done now need to do second part i.e domain name
+       // domain name can have letters, numbers, -
+       // -> var regx = /^([a-zA-z0-9\.-]+)@([a-zA-z0-9 -]+)$/ now username@domain name is done ..+ for any length
+       // third and fourth part: is the dot and extension .co.in so = var regx = /^([a-zA-z0-9\.-]+)@([a-zA-z0-9 -]+).([a-z]{2,8}).([a-z]{2,8})$/
+        // . outside the range is dot only but in the range it can act anything so thats why \.
+        /* \d -> for range [0-9]
+           \t -> for tabs
+           \s -> for tabs and spaces
+           \w -> for a-z, A-Z, 0-9, _ */
+
+        var regx = /^([a-zA-z0-9\.-]+)@([a-zA-z0-9 -]+).([a-z]{2,8}).([a-z]{2,8})?$/; // the ? at the end of last set of expression makes it optional so if we type ila@gmail.com it will be valid too
+        if(regx.test(mobileno))
+        {
+            document.getElementById("lb1").innerHTML= "Valid";
+            document.getElementById("lb1").style.color = "green";
+            document.getElementById("lb1").style.visibility ="visible";
+        }
+        else
+        {
+            document.getElementById("lb1").innerHTML= "InValid";
+            document.getElementById("lb1").style.color = "red";
+            document.getElementById("lb1").style.visibility ="visible";
+        }
+    }
+    </script>
+</head>
+<body>
+    <form>
+    <input id="text1" placeholder="E-mail" type="text"/>
+    <label id="lb1" style="color: red; visibility: hidden;">Invalid</label>
+    <br>
+    <br>
+    <button onclick="validate()" type="button">Submit</button>
+</form>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <title> Dropdown </title>
+        <script type="text/javascript">
+        function fn1()
+        {
+            var sclct = document.getElementById("tx"); //we get the elements from select with id "tx" and store it on variable sclct
+            alert(sclct.options[sclct.selectedIndex].value); //we take all the options from the variable sclct in array form, now we want 
+            //to get values dynamically so the property selectedIndex does it give the value which is selected so it could be option[0] from the values
+            //i.e option[0].value or option[1].value or option[2].value..user can select any value so we use selectedIndex
+        }
+        
+        </script>
+    </head>
+    <body>
+        <select id="tx"> 
+            <option value="Male"> Male </option>
+            <option value="Female"> Female </option>
+            <option value="Other"> Other </option>
+        </select>
+            <br>
+            <br>
+            <button onclick="fn1()"> Click Me </button>
+
+        </select>
+    </body>
+</html>

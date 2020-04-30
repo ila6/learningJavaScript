@@ -1,0 +1,93 @@
+<html>
+    <head>
+        <titl>
+         Switch case
+        </titl>
+    </head>
+    <body>
+        <script type="text/javascript">
+
+            //One uses switch case when there are many conditions
+
+            //Find the day of the week by accepting a number, 1 for Sunday, 2 for Monday....
+            /*var day=48;
+            switch(day) //with keyword switch we pass the variable as argument and related to this variable we have many switch cases
+            {
+                case 1:
+                    document.write("<h2>Sunday</h2>");
+                    break; //along case we have to give break so that if it is true program can come out of it
+                case 2:
+                    document.write("<h2>Monday</h2>");
+                    break;
+                case 3: 
+                    document.write("<h2>Tuesday</h2>");
+                    break;
+                case 4: 
+                    document.write("<h2>Wednesday</h2>");
+                    break;
+                case 5: 
+                    document.write("<h2>Thursday</h2>");
+                    break;
+                case 6: 
+                    document.write("<h2>Friday</h2>");
+                    break;
+                case 7: 
+                    document.write("<h2>Satday</h2>");
+                    break;
+                default: 
+                    document.write("<h2> Wrong input </h2>"); // suppose we give 48 that isnt included then default works
+            }*/
+
+            //Now switch works different than in java or c++ as it can work with strings, expressions and boolean values too
+            //String:-
+            /*var day= "Tuesday";
+            switch(day)
+            {
+                case "Monday":
+                    document.write("<h2> First Working Day</h2>");
+                    break;
+                case "Tuesday":
+                    document.write("<h2> Second Working Day</h2>");
+                    break;
+                case "Wednesday":
+                    document.write("<h2> Third Working Day</h2>");
+                    break;
+                case "Thursday":
+                    document.write("<h2> Fourth Working Day</h2>");
+                    break;
+                case "Friday":
+                    document.write("<h2> Fifth Working Day</h2>");
+                    break;
+                case "Saturday":
+                    document.write("<h2> Sixth Working Day</h2>");
+                    break;
+                case "Sunday":
+                    document.write("<h2> Seventh Working Day</h2>");
+                    break;
+                    
+            }*/
+            //Boolean
+            /*var check= true;
+            switch(check)
+            {
+                case true: //case sensitive .. didnt work when accidentally write True
+                    document.write("<h2> Boolean with Switch </h2>");
+                    break;
+                case false:
+                    document.write("<h2> False in Switch </h2>");
+                    break;
+
+            }*/
+
+            //Expressions
+            var name = "Ila";
+            switch(name+" Sharma") //concatinates a string if the case is true
+            {
+                case "Ila Sharma": //need to fulfill the case in switch argument not just "Ila"
+                    document.write("<h2>that is my name</h2>");
+        
+            }
+            
+        </script>
+    </body>
+</html>
